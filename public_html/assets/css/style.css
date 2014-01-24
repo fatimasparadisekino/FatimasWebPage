@@ -421,9 +421,16 @@ footer {
     box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
 }
 
-footer .widget {
+footer .widget_right {
     margin-top: 20px;
     text-align: left;
+    float: right;
+}
+
+footer .widget_left {
+    margin-top: 20px;
+    text-align: left;
+    float: left;
 }
 
 footer .widget h4 {
@@ -508,6 +515,7 @@ footer .copyright {
 footer .social {
     margin-top: 10px;
     text-align: right;
+    float: right;
 }
 
 footer .social a { display: inline-block; width: 24px; height: 24px; margin: 0 0 0 8px; vertical-align: middle; }
