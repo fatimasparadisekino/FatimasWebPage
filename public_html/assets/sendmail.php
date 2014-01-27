@@ -21,13 +21,13 @@ if($_POST) {
     $array['messageMessage'] = '';
 
     if($clientName == '') {
-        $array['nameMessage'] = 'Please enter your name.';
+        $array['nameMessage'] = 'Introduzca su nombre.';
     }
     if(!isEmail($clientEmail)) {
-        $array['emailMessage'] = 'Please insert a valid email address.';
+        $array['emailMessage'] = 'Introduzca una dirección de correo válida.';
     }
     if($message == '') {
-        $array['messageMessage'] = 'Please enter your message.';
+        $array['messageMessage'] = 'Introduzca su mensaje.';
     }
     if($clientName != '' && isEmail($clientEmail) && $message != '') {
         // Send email

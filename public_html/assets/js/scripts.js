@@ -1,3 +1,5 @@
+
+
 /*
     Slider
 */
@@ -48,9 +50,18 @@ jQuery(document).ready(function() {
 /*
     Show latest tweets
 */
-jQuery(function($) {
+!function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if(!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id; 
+        js.src = p + "://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js,fjs);
+    }
+}(document,"script","twitter-wjs");
+/*jQuery(function($) {
     $(".show-tweets").tweet({
-        username: "anli_zaimi",
+        username: "FatimasParadis1",
         page: 1,
         count: 10,
         loading_text: "loading ..."
@@ -66,7 +77,22 @@ jQuery(function($) {
         };
         ticker();
     });
-});
+});*/
+
+/*jQuery(function($){
+    $(".show-tweets").tweet({
+      join_text: "auto",
+      username: "FatimasParadis1",
+      avatar_size: 48,
+      count: 3,
+      auto_join_text_default: " we said, ",
+      auto_join_text_ed: " we ",
+      auto_join_text_ing: " we were ",
+      auto_join_text_reply: " we replied ",
+      auto_join_text_url: " we were checking out ",
+      loading_text: "loading tweets..."
+    });
+  });*/
 
 
 /*
