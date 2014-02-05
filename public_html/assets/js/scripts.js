@@ -150,7 +150,7 @@ jQuery(document).ready(function() {
                 }
                 if(json.nameMessage == '' && json.emailMessage == '' && json.messageMessage == '') {
                     $('.contact-form form').fadeOut('fast', function() {
-                        $('.contact-form').append('<p><span class="violet">Thanks for contacting us!</span> We will get back to you very soon.</p>');
+                        $('.contact-form').append('<p><span class="violet">Gracias por contactarnos!</span> Responderemos tu mensaje lo más pronto posible.</p>');
                     });
                 }
             }
