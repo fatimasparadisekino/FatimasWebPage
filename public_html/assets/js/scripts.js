@@ -128,9 +128,10 @@ jQuery(document).ready(function() {
 jQuery(document).ready(function() {
     $('.contact-form form').submit(function() {
 
-        $('.contact-form form .nameLabel').html('Name');
+        $('.contact-form form .nameLabel').html('Nombre');
         $('.contact-form form .emailLabel').html('Email');
-        $('.contact-form form .messageLabel').html('Message');
+        $('.contact-form form .messageLabel').html('Mensaje');
+        $('.contact-form form .captchaLabel').html('CAPTCHA');
 
         var postdata = $('.contact-form form').serialize();
         $.ajax({
@@ -148,9 +149,12 @@ jQuery(document).ready(function() {
                 if(json.messageMessage != '') {
                     $('.contact-form form .messageLabel').append(' - <span class="violet" style="font-size: 13px; font-style: italic"> ' + json.messageMessage + '</span>');
                 }
-                if(json.nameMessage == '' && json.emailMessage == '' && json.messageMessage == '') {
+                if(json.captchaMessage != '') {
+                    $('.contact-form form .captchaLabel').append(' - <span class="violet" style="font-size: 13px; font-style: italic"> ' + json.captchaMessage + '</span>');
+                }
+                if(json.nameMessage == '' && json.emailMessage == '' && json.messageMessage == '' && json.captchaMessage == '') {
                     $('.contact-form form').fadeOut('fast', function() {
-                        $('.contact-form').append('<p><span class="violet">Gracias por contactarnos!</span> Responderemos tu mensaje lo más pronto posible.</p>');
+                        $('.contact-form').append('<p><span class="violet">Gracias por contactarnos!</span> Responderemos su mensaje lo más pronto posible.</p>');
                     });
                 }
             }

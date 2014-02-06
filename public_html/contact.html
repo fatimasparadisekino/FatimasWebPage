@@ -95,13 +95,27 @@
                     <p>Si deseas recibir información acerca de los servicios que ofrecemos, puedes escribirnos algún mensaje, el cual responderemos a la brevedad posible.</p>
                     <form method="post" action="assets/sendmail.php">
                         <label for="name" class="nameLabel">Nombre</label>
-                          <input id="name" type="text" name="name" placeholder="Su nombre...">
+                        <input id="name" type="text" name="name" placeholder="Su nombre...">
                         <label for="email" class="emailLabel">Email</label>
-                          <input id="email" type="text" name="email" placeholder="Su email...">
+                        <input id="email" type="text" name="email" placeholder="Su email...">
                         <label for="subject">Asunto</label>
-                          <input id="subject" type="text" name="subject" placeholder="Su asunto...">
+                        <input id="subject" type="text" name="subject" placeholder="Su asunto...">
                         <label for="message" class="messageLabel">Mensaje</label>
-                          <textarea id="message" name="message" placeholder="Su Mensaje..."></textarea>
+                        <textarea id="message" name="message" placeholder="Su Mensaje..."></textarea>
+
+                        <label for="captcha" class="captchaLabel">CAPTCHA</label>
+                        <script type="text/javascript"
+                                src="http://www.google.com/recaptcha/api/challenge?k=6LeQOO4SAAAAAG6QjTeH5zrJXFdwrH22G8xn_h_R ">
+                        </script>
+                        <noscript>
+                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeQOO4SAAAAAG6QjTeH5zrJXFdwrH22G8xn_h_R "
+                                height="300" width="500" frameborder="0"></iframe><br>
+                        <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                        </textarea>
+                        <input type="hidden" name="recaptcha_response_field"
+                               value="manual_challenge">
+                        </noscript>
+
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
@@ -162,6 +176,9 @@
         <script src="assets/js/jquery.quicksand.js"></script>
         <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
         <script src="assets/js/scripts.js"></script>
+        <script type="text/javascript"
+                src="http://www.google.com/recaptcha/api/challenge?k=6LeOOO4SAAAAAEV5kHmc4YwBEiI_maB8v8TDU1mF ">
+        </script>
 
     </body>
 
