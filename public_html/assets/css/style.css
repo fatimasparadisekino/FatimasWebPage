@@ -62,7 +62,7 @@ strong { font-weight: bold; }
     width: 280px;
     height: 63px;
     padding: 30px 0;
-    background: url(../img/logo.PNG) 20px center no-repeat;
+    background: url(../img/logo.png) 20px center no-repeat;
 }
 
 .header ul.nav {
@@ -1148,4 +1148,27 @@ ul.portfolio-img li {
 
 .twitter-timeline {
     height: 180px;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-wrapper {
+	width: 600px;
+	max-width: 100%;
 }
